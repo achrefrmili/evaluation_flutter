@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'newPage.dart';
 void main() {
   runApp(MaterialApp(
     home: MyApp(),
@@ -47,6 +47,7 @@ class _MyAppState extends State<MyApp> {
         _infoText = "obésité morbide ou  massive";
       }
     });
+Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context) => new Second(_infoText) ));
   }
 
 //interface app
@@ -109,11 +110,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              Text(
-                _infoText,
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.red, fontSize: 20.0),
-              )
+
             ],
           ),
         ),
